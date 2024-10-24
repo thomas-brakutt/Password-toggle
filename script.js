@@ -19,3 +19,17 @@ Hints
 <!-- Password input -->
 <input type="password">
 */
+
+const inputPassword = document.getElementById("input");
+const button = document.getElementById("button");
+
+button.addEventListener("click", () => {
+  if (inputPassword.type === "password") {
+    inputPassword.type = "text";
+    button.textContent = "Hide Password";
+  } else {
+    inputPassword.type = "password";
+    button.textContent = "Show Password";
+  }
+  console.log(inputPassword);
+});
